@@ -1,7 +1,7 @@
 
 let data = [];
 
-fetch('components.json')
+fetch('uandi_csv.json')
   .then(response => response.json())
   .then(json => {
     data = json;
