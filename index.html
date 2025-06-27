@@ -1,19 +1,74 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Name Search</title>
-  <script src="script.js" defer></script>
-  <style> 
-    body { font-family: Arial; margin: 30px; }
-    input { padding: 10px; width: 300px; }
-    #results { margin-top: 20px; }
-    .card { padding: 10px; border: 1px solid #ccc; margin-bottom: 10px; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Component Database</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    #searchInput {
+      padding: 12px 20px;
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    #results {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border: 1px solid #e0e0e0;
+    }
+
+    .card strong {
+      color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      #searchInput {
+        width: 95%;
+      }
+    }
   </style>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Volunteer Database</h1>
-  <input type="text" id="searchInput" placeholder="Search by Volunteer name..." />
+  <h1>Component Database</h1>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Search by name, type, value..." />
+  </div>
   <div id="results"></div>
 </body>
 </html>
